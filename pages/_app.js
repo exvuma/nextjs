@@ -1,4 +1,3 @@
-// import '../styles.css';
 import '../css/bootstrap.min.css';
 
 import '../css/small-business.css';

@@ -1,15 +1,22 @@
-import { Children, ReactNode } from 'react';
-
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 type Props = {
   children?: ReactNode;
   date: string;
   title: string;
 };
 const BlogPost = ({ children, date, title }: Props) => {
-  // console.log(children)
-  // return <div className={styles.container}>{children}</div>;
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <h2>
+        <Link href='/'>
+          <a>Back to home</a>
+        </Link>
+      </h2>{' '}
       <div className='container'>
         <div className='row'>
           <div className='container'>
