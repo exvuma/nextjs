@@ -6,17 +6,19 @@ type Props = {
   date: string;
   title: string;
 };
-const BlogPost = ({ children, date, title }: Props) => {
+import { GetStaticProps } from 'next';
+
+export const getStaticProps: any = async (context: any) => {
+  // ...
+  console.log('context', context);
+  return context;
+};
+export const BlogPost = ({ children, date, title }: Props) => {
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <h2>
-        <Link href='/'>
-          <a>Back to home</a>
-        </Link>
-      </h2>{' '}
       <div className='container'>
         <div className='row'>
           <div className='container'>
@@ -38,4 +40,3 @@ const BlogPost = ({ children, date, title }: Props) => {
     </>
   );
 };
-export default BlogPost;

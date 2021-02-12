@@ -1,19 +1,23 @@
-import Layout from '../../components/Layout.tsx';
-import BlogPost from '../../components/BlogPost';
+import Layout from '../../components/Layout';
+import { BlogPost } from '../../components/BlogPost';
+import { useRouter } from 'next/router';
+import { Posts } from './constants';
 
-export default function FirstPost() {
+const getPost = (id: string) => {
+  return Posts.find(post => post.id === id);
+};
+export default function Post() {
+  const router = useRouter();
+  const pid = router.pathname.replace('/posts/', '');
+  const post = getPost(pid);
+  if (post === undefined) {
+    return 'error no post for ' + pid;
+  }
+  const { title, date, id } = post;
+
   return (
     <Layout>
-      {/* <Head>
-        <title>First Post</title>
-      </Head>
-      <h1>First Post</h1>
-      <h2>
-        <Link href='/'>
-          <a>Back to home</a>
-        </Link>
-      </h2> */}
-      <BlogPost title='Publishing Typescript to NPM' date='Feburary 29th, 2019'>
+      <BlogPost title={title} date={date}>
         <h2 id='tldr'>TLDR;</h2>
         <p>
           Before publishing Typescript or really any JS package to npm, test
@@ -271,7 +275,7 @@ export default function FirstPost() {
 
         <pre>
           <code>
-            npm pack &gt; @cloudflare/kv-asset-handler@0.0.8 prepack
+            `npm pack &gt; @cloudflare/kv-asset-handler@0.0.8 prepack
             /Users/victoriabernard/cf-github/kv-asset-handler &gt; npm run build
             &gt; @cloudflare/kv-asset-handler@0.0.8 build
             /Users/victoriabernard/cf-github/kv-asset-handler &gt; tsc -d npm
@@ -299,7 +303,7 @@ export default function FirstPost() {
             size: 207.7 kB npm notice unpacked size: 278.1 kB npm notice shasum:
             141e38d27bb7fe3488ed8b3645e41a03b315231d npm notice integrity:
             sha512-kNqQNrT/Y4961[...]vGciG+vGBweDw== npm notice total files: 27
-            npm notice
+            npm notice`
           </code>
         </pre>
 
