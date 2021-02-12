@@ -1,21 +1,30 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 type Props = {
   children?: ReactNode;
-  date: string;
-  title: string;
 };
-import { GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import { Posts } from '../pages/posts/constants';
+import Layout from './Layout';
 
+const getPost = (id: string) => {
+  return Posts.find(post => post.id === id);
+};
 export const getStaticProps: any = async (context: any) => {
   // ...
   console.log('context', context);
   return context;
 };
-export const BlogPost = ({ children, date, title }: Props) => {
+export const BlogPost = ({ children }: Props) => {
+  const router = useRouter();
+  const pid = router.pathname.replace('/posts/', '');
+  const post = getPost(pid);
+  if (post === undefined) {
+    return <>'error no post for ' + {pid}</>;
+  }
+  const { title, date } = post;
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
       </Head>
@@ -37,6 +46,6 @@ export const BlogPost = ({ children, date, title }: Props) => {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
