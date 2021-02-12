@@ -4,7 +4,7 @@ type Props = {
   children?: ReactNode;
 };
 import { useRouter } from 'next/router';
-import { Posts } from '../pages/posts/constants';
+import { Posts } from '../constants';
 import Layout from './Layout';
 
 const getPost = (id: string) => {

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import { Posts } from './constants';
+import { Posts } from '../../constants';
 import { NavBar } from '../../components/Nav';
 import { Post } from '../..';
 type Props = {
