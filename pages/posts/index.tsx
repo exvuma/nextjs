@@ -9,6 +9,10 @@ type Props = {
   children?: ReactNode;
   posts: Post[];
 };
+/**
+ *
+ * List all Blog posts
+ */
 const Blog = ({ children, posts }: Props) => {
   return (
     <>

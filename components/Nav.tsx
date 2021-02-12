@@ -41,10 +41,7 @@ export const NavBar = ({}: Props) => {
               <a href='projects.html'>Projects</a>
             </li>
             <li>
-              <a href='blog.html'>Blog</a>
-            </li>
-            <li>
-              <Link href='/blog'>
+              <Link href='/posts'>
                 <a>Blog</a>
               </Link>
             </li>
