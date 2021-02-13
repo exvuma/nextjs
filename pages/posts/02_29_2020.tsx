@@ -11,10 +11,13 @@ export default function Post() {
       <p>Inside package to publish:</p>
       <pre>
         <code>
-          {' '}
-          ~/package $ npm pack ... npm notice === Tarball Details === npm notice
-          name: package npm notice version: 0.0.0 npm notice filename:
-          package-0.0.0.tgz ....
+          ~/package $ npm pack {'\n'}
+          ... {'\n'}
+          npm notice === Tarball Details === {'\n'}
+          npm notice name: package {'\n'}
+          npm notice version: 0.0.0 {'\n'}
+          npm notice filename: package-0.0.0.tgz {'\n'}
+          ....
         </code>
       </pre>
 
@@ -25,8 +28,8 @@ export default function Post() {
 
       <pre>
         <code>
-          ~/project $ npm install ~/package/package-0.0.0.tgz ~/project $ npm
-          run start
+          ~/project $ npm install ~/package/package-0.0.0.tgz {'\n'}
+          ~/project $ npm run start
         </code>
       </pre>
 
@@ -50,7 +53,7 @@ export default function Post() {
 
       <pre>
         <code>
-          {`"name": "package",
+          {`  "name": "package",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -120,33 +123,30 @@ export default function Post() {
 
       <pre>
         <code>
-          resolve 'package' in
-          '/Users/victoriabernard/test/project/workers-site' Parsed request is a
-          module using description file:
-          /Users/victoriabernard/test/project/workers-site/package.json
-          (relative path: .) Field 'browser' doesn't contain a valid alias
-          configuration resolve as module /Users/victoriabernard/node_modules
-          doesn't exist or is not a directory /Users/node_modules doesn't exist
-          or is not a directory /node_modules doesn't exist or is not a
-          directory looking for modules in
-          /Users/victoriabernard/test/project/workers-site/node_modules using
-          description file:
-          /Users/victoriabernard/test/project/workers-site/package.json
-          (relative path: ./node_modules) Field 'browser' doesn't contain a
-          valid alias configuration looking for modules in
-          /Users/victoriabernard/test/project/node_modules using description
-          file: /Users/victoriabernard/test/project/package.json (relative path:
-          ./node_modules) Field 'browser' doesn't contain a valid alias
-          configuration looking for modules in
-          /Users/victoriabernard/test/node_modules using description file:
-          /Users/victoriabernard/test/package.json (relative path:
-          ./node_modules) Field 'browser' doesn't contain a valid alias
-          configuration using description file:
-          /Users/victoriabernard/test/project/workers-site/node_modules/@cloudflare/kv-asset-handler/package.json
-          (relative path: .) no extension Field 'browser' doesn't contain a
-          valid alias configuration using description file:
-          /Users/victoriabernard/test/project/node_modules/@cloudflare/kv-asset-handler/package.json
-          (relative path: .) no extension ...
+        resolve 'package' in '/Users/victoriabernard/test/project/workers-site' {' \n'}
+  Parsed request is a module {' \n'}
+  using description file: /Users/victoriabernard/test/project/workers-site/package.json (relative path: .) {' \n'}
+    Field 'browser' doesn't contain a valid alias configuration {' \n'}
+    resolve as module {' \n'}
+      /Users/victoriabernard/node_modules doesn't exist or is not a directory {' \n'}
+      /Users/node_modules doesn't exist or is not a directory {' \n'}
+      /node_modules doesn't exist or is not a directory {' \n'}
+      looking for modules in /Users/victoriabernard/test/project/workers-site/node_modules {' \n'}
+        using description file: /Users/victoriabernard/test/project/workers-site/package.json (relative path: ./node_modules) {' \n'}
+          Field 'browser' doesn't contain a valid alias configuration {' \n'}
+      looking for modules in /Users/victoriabernard/test/project/node_modules {' \n'}
+        using description file: /Users/victoriabernard/test/project/package.json (relative path: ./node_modules) {' \n'}
+          Field 'browser' doesn't contain a valid alias configuration {' \n'}
+      looking for modules in /Users/victoriabernard/test/node_modules {' \n'}
+        using description file: /Users/victoriabernard/test/package.json (relative path: ./node_modules) {' \n'}
+          Field 'browser' doesn't contain a valid alias configuration {' \n'}
+          using description file: /Users/victoriabernard/test/project/workers-site/node_modules/@cloudflare/kv-asset-handler/package.json (relative path: .) {' \n'}
+            no extension {' \n'}
+              Field 'browser' doesn't contain a valid alias configuration {' \n'}
+          using description file: /Users/victoriabernard/test/project/node_modules/@cloudflare/kv-asset-handler/package.json (relative path: .) {' \n'}
+            no extension {' \n'}
+
+...
         </code>
       </pre>
 
@@ -174,21 +174,34 @@ export default function Post() {
       <pre>
         <code>
           {' '}
-          ~/package $ npm pack npm notice npm notice 📦 package@0.0.0 npm notice
-          === Tarball Contents === npm notice 90B .prettierrc npm notice 9.7kB
-          LICENSE_APACHE npm notice 1.1kB LICENSE_MIT npm notice 940B
-          package.json npm notice 290B tsconfig.json npm notice 4.4kB
-          CHANGELOG.md npm notice 7.6kB src/test/getAssetFromKV.ts npm notice
-          7.0kB src/index.ts npm notice 927B src/test/mapRequestToAsset.ts npm
-          notice 1.7kB src/mocks.ts npm notice 1.2kB
-          src/test/serveSinglePageApp.ts npm notice 1.2kB src/types.ts npm
-          notice 489B .github/workflows/test.yml npm notice === Tarball Details
-          === npm notice name: package npm notice version: 0.0.0 npm notice
-          filename: package-0.0.0.tgz npm notice package size: 11.2 kB npm
-          notice unpacked size: 36.7 kB npm notice shasum:
-          08c4b718d1328bd32690983793d9ce0be37a5a5e npm notice integrity:
-          sha512-29zlfXbSlJEuC[...]S2qhbnwINeeJA== npm notice total files: 13
-          npm notice package-0.0.0.tgz
+~/package $ npm pack {'\n'}
+npm notice {'\n'}
+npm notice 📦  package@0.0.0 {'\n'}
+npm notice === Tarball Contents === {'\n'}
+npm notice 90B   .prettierrc {'\n'}
+npm notice 9.7kB LICENSE_APACHE {'\n'}
+npm notice 1.1kB LICENSE_MIT {'\n'}
+npm notice 940B  package.json {'\n'}
+npm notice 290B  tsconfig.json {'\n'}
+npm notice 4.4kB CHANGELOG.md {'\n'}
+npm notice 7.6kB src/test/getAssetFromKV.ts {'\n'}
+npm notice 7.0kB src/index.ts {'\n'}
+npm notice 927B  src/test/mapRequestToAsset.ts {'\n'}
+npm notice 1.7kB src/mocks.ts {'\n'}
+npm notice 1.2kB src/test/serveSinglePageApp.ts {'\n'}
+npm notice 1.2kB src/types.ts {'\n'}
+npm notice 489B  .github/workflows/test.yml {'\n'}
+npm notice === Tarball Details === {'\n'}
+npm notice name:          package {'\n'}
+npm notice version:       0.0.0 {'\n'}
+npm notice filename:      package-0.0.0.tgz {'\n'}
+npm notice package size:  11.2 kB {'\n'}
+npm notice unpacked size: 36.7 kB {'\n'}
+npm notice shasum:        08c4b718d1328bd32690983793d9ce0be37a5a5e {'\n'}
+npm notice integrity:     sha512-29zlfXbSlJEuC[...]S2qhbnwINeeJA== {'\n'}
+npm notice total files:   13 {'\n'}
+npm notice {'\n'}
+package-0.0.0.tgz {'\n'}
         </code>
       </pre>
 
@@ -218,26 +231,42 @@ export default function Post() {
 
       <pre>
         <code>
-          npm pack &gt; @cloudflare/kv-asset-handler@0.0.8 prepack
-          /Users/victoriabernard/cf-github/kv-asset-handler &gt; npm run build
-          &gt; @cloudflare/kv-asset-handler@0.0.8 build
-          /Users/victoriabernard/cf-github/kv-asset-handler &gt; tsc -d npm
-          notice npm notice 📦 @cloudflare/kv-asset-handler@0.0.8 npm notice ===
-          Tarball Contents === npm notice 90B .prettierrc npm notice 9.7kB
-          LICENSE_APACHE npm notice 1.1kB LICENSE_MIT npm notice 1.1kB
-          package.json npm notice 290B tsconfig.json npm notice 4.4kB
-          CHANGELOG.md npm notice 6.9kB README.md npm notice 130.4kB
-          cloudflare-kv-asset-handler-0.0.8.tgz npm notice 7.6kB
-          src/test/getAssetFromKV.ts npm notice 7.0kB src/index.ts npm notice
-          927B src/test/mapRequestToAsset.ts npm notice 1.7kB src/mocks.ts npm
-          notice 1.2kB src/test/serveSinglePageApp.ts npm notice 1.2kB
-          src/types.ts npm notice 489B .github/workflows/test.yml npm notice ===
-          Tarball Details === npm notice name: @cloudflare/kv-asset-handler npm
-          notice version: 0.0.8 npm notice filename:
-          cloudflare-kv-asset-handler-0.0.8.tgz npm notice package size: 146.1
-          kB npm notice unpacked size: 174.0 kB npm notice shasum:
-          eeea2d8649bedf47a93a793ff969dc0f65afba3d npm notice integrity:
-          sha512-wCW9D6UvpQ0xv[...]0lFJUu9pHcP1A== npm notice total files: 15
+        npm pack{'\n'}
+{'\n'}
+> @cloudflare/kv-asset-handler@0.0.8 prepack /Users/victoriabernard/cf-github/kv-asset-handler{'\n'}
+> npm run build{'\n'}
+{'\n'}
+{'\n'}
+> @cloudflare/kv-asset-handler@0.0.8 build /Users/victoriabernard/cf-github/kv-asset-handler{'\n'}
+> tsc -d{'\n'}
+{'\n'}
+npm notice{'\n'}
+npm notice 📦  @cloudflare/kv-asset-handler@0.0.8{'\n'}
+npm notice === Tarball Contents ==={'\n'}
+npm notice 90B     .prettierrc{'\n'}
+npm notice 9.7kB   LICENSE_APACHE{'\n'}
+npm notice 1.1kB   LICENSE_MIT{'\n'}
+npm notice 1.1kB   package.json{'\n'}
+npm notice 290B    tsconfig.json{'\n'}
+npm notice 4.4kB   CHANGELOG.md{'\n'}
+npm notice 6.9kB   README.md{'\n'}
+npm notice 130.4kB cloudflare-kv-asset-handler-0.0.8.tgz{'\n'}
+npm notice 7.6kB   src/test/getAssetFromKV.ts{'\n'}
+npm notice 7.0kB   src/index.ts{'\n'}
+npm notice 927B    src/test/mapRequestToAsset.ts{'\n'}
+npm notice 1.7kB   src/mocks.ts{'\n'}
+npm notice 1.2kB   src/test/serveSinglePageApp.ts{'\n'}
+npm notice 1.2kB   src/types.ts{'\n'}
+npm notice 489B    .github/workflows/test.yml{'\n'}
+npm notice === Tarball Details ==={'\n'}
+npm notice name:          @cloudflare/kv-asset-handler{'\n'}
+npm notice version:       0.0.8{'\n'}
+npm notice filename:      cloudflare-kv-asset-handler-0.0.8.tgz{'\n'}
+npm notice package size:  146.1 kB{'\n'}
+npm notice unpacked size: 174.0 kB{'\n'}
+npm notice shasum:        eeea2d8649bedf47a93a793ff969dc0f65afba3d{'\n'}
+npm notice integrity:     sha512-wCW9D6UvpQ0xv[...]0lFJUu9pHcP1A=={'\n'}
+npm notice total files:   15{'\n'}
         </code>
       </pre>
 
@@ -254,34 +283,55 @@ export default function Post() {
 
       <pre>
         <code>
-          `npm pack &gt; @cloudflare/kv-asset-handler@0.0.8 prepack
-          /Users/victoriabernard/cf-github/kv-asset-handler &gt; npm run build
-          &gt; @cloudflare/kv-asset-handler@0.0.8 build
-          /Users/victoriabernard/cf-github/kv-asset-handler &gt; tsc -d npm
-          notice npm notice 📦 @cloudflare/kv-asset-handler@0.0.8 npm notice ===
-          Tarball Contents === npm notice 90B .prettierrc npm notice 9.7kB
-          LICENSE_APACHE npm notice 1.1kB LICENSE_MIT npm notice 19.7kB
-          dist/test/getAssetFromKV.js npm notice 10.8kB dist/index.js npm notice
-          4.1kB dist/test/mapRequestToAsset.js npm notice 4.8kB dist/mocks.js
-          npm notice 4.5kB dist/test/serveSinglePageApp.js npm notice 2.6kB
-          dist/types.js npm notice 1.1kB package.json npm notice 290B
-          tsconfig.json npm notice 4.4kB CHANGELOG.md npm notice 6.9kB README.md
-          npm notice 185.0kB cloudflare-kv-asset-handler-0.0.8.tgz npm notice
-          11B dist/test/getAssetFromKV.d.ts npm notice 7.6kB
-          src/test/getAssetFromKV.ts npm notice 1.6kB dist/index.d.ts npm notice
-          7.0kB src/index.ts npm notice 11B dist/test/mapRequestToAsset.d.ts npm
-          notice 927B src/test/mapRequestToAsset.ts npm notice 465B
-          dist/mocks.d.ts npm notice 1.7kB src/mocks.ts npm notice 11B
-          dist/test/serveSinglePageApp.d.ts npm notice 1.2kB
-          src/test/serveSinglePageApp.ts npm notice 780B dist/types.d.ts npm
-          notice 1.2kB src/types.ts npm notice 489B .github/workflows/test.yml
-          npm notice === Tarball Details === npm notice name:
-          @cloudflare/kv-asset-handler npm notice version: 0.0.8 npm notice
-          filename: cloudflare-kv-asset-handler-0.0.8.tgz npm notice package
-          size: 207.7 kB npm notice unpacked size: 278.1 kB npm notice shasum:
-          141e38d27bb7fe3488ed8b3645e41a03b315231d npm notice integrity:
-          sha512-kNqQNrT/Y4961[...]vGciG+vGBweDw== npm notice total files: 27
-          npm notice`
+        {`npm pack
+
+> @cloudflare/kv-asset-handler@0.0.8 prepack /Users/victoriabernard/cf-github/kv-asset-handler
+> npm run build
+
+
+> @cloudflare/kv-asset-handler@0.0.8 build /Users/victoriabernard/cf-github/kv-asset-handler
+> tsc -d
+
+npm notice
+npm notice 📦  @cloudflare/kv-asset-handler@0.0.8
+npm notice === Tarball Contents ===
+npm notice 90B     .prettierrc
+npm notice 9.7kB   LICENSE_APACHE
+npm notice 1.1kB   LICENSE_MIT
+npm notice 19.7kB  dist/test/getAssetFromKV.js
+npm notice 10.8kB  dist/index.js
+npm notice 4.1kB   dist/test/mapRequestToAsset.js
+npm notice 4.8kB   dist/mocks.js
+npm notice 4.5kB   dist/test/serveSinglePageApp.js
+npm notice 2.6kB   dist/types.js
+npm notice 1.1kB   package.json
+npm notice 290B    tsconfig.json
+npm notice 4.4kB   CHANGELOG.md
+npm notice 6.9kB   README.md
+npm notice 185.0kB cloudflare-kv-asset-handler-0.0.8.tgz
+npm notice 11B     dist/test/getAssetFromKV.d.ts
+npm notice 7.6kB   src/test/getAssetFromKV.ts
+npm notice 1.6kB   dist/index.d.ts
+npm notice 7.0kB   src/index.ts
+npm notice 11B     dist/test/mapRequestToAsset.d.ts
+npm notice 927B    src/test/mapRequestToAsset.ts
+npm notice 465B    dist/mocks.d.ts
+npm notice 1.7kB   src/mocks.ts
+npm notice 11B     dist/test/serveSinglePageApp.d.ts
+npm notice 1.2kB   src/test/serveSinglePageApp.ts
+npm notice 780B    dist/types.d.ts
+npm notice 1.2kB   src/types.ts
+npm notice 489B    .github/workflows/test.yml
+npm notice === Tarball Details ===
+npm notice name:          @cloudflare/kv-asset-handler
+npm notice version:       0.0.8
+npm notice filename:      cloudflare-kv-asset-handler-0.0.8.tgz
+npm notice package size:  207.7 kB
+npm notice unpacked size: 278.1 kB
+npm notice shasum:        141e38d27bb7fe3488ed8b3645e41a03b315231d
+npm notice integrity:     sha512-kNqQNrT/Y4961[...]vGciG+vGBweDw==
+npm notice total files:   27
+npm notice`}
         </code>
       </pre>
 
