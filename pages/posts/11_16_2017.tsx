@@ -77,7 +77,7 @@ export default function Post() {
         year.
       </p>
       <a href='https://www.bls.gov/opub/ted/2016/college-tuition-and-fees-increase-63-percent-since-january-2006.htm'>
-        <img className='img-fluid' src='/next/pictures/chart.svg' />
+        <img className='img-fluid' src='/__next/pictures/chart.svg' />
       </a>
       <p className='post'>
         From the graph above we can see how consumer price index increases much
