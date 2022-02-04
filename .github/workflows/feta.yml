@@ -14,7 +14,6 @@ jobs:
       - name: Dependabot metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1.1.1
-        run: cat "${{ steps.metadata.outputs.dependency-names }}"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: cat
