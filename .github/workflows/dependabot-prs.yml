@@ -1,0 +1,19 @@
+name: Dependabot Pull Request
+on: commit
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Checking the actor will prevent your Action run failing on non-Dependabot PRs
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+    - name: Fetch Dependabot metadata
+      id: dependabot-metadata
+      uses: dependabot/fetch-metadata@v1.1.1
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
+    - name: cat random
+      id: dependabot-cat
+      run: cat "$PR_URL"
+      env:
+        PR_URL: ${{github.event.pull_request.html_url}}
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
