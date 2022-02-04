@@ -1,4 +1,4 @@
-name: Dependabot fetch metadata
+name: feta
 on: pull_request
 
 permissions:
@@ -9,16 +9,10 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: cat
         id: metadata-cat
-        run: cat walter
+        run: echo walter
           # The following properties are now available:
           #  - steps.metadata.outputs.dependency-names
           #  - steps.metadata.outputs.dependency-type
