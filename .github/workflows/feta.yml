@@ -19,7 +19,7 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: cat
         id: metadata-cat
-        run: cat "${{ steps.metadata.outputs.dependency-names }}"" && cat "walter"
+        run: cat walter
           # The following properties are now available:
           #  - steps.metadata.outputs.dependency-names
           #  - steps.metadata.outputs.dependency-type
