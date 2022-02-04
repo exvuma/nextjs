@@ -3,6 +3,8 @@ on: pull_request_target
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Checking the actor will prevent your Action run failing on non-Dependabot PRs
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
     - name: Fetch Dependabot metadata
       id: dependabot-metadata
