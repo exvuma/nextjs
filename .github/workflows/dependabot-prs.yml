@@ -1,5 +1,5 @@
 name: Dependabot auto-label
-on: pull_request_target
+on: push
 permissions:
   pull-requests: write
   issues: write
